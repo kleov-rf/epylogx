@@ -27,6 +27,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
+    "@nuxtjs/vuetify",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,4 +44,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   loading: "~/components/loading.vue",
+  server: {
+    host: "0.0.0.0",
+  },
 };
