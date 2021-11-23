@@ -1,9 +1,12 @@
-<template>
-  <h3>category #{{ this.$route.params.id }}</h3>
-</template>
+<template></template>
 
 <script>
-export default {};
+export default {
+  beforeCreate() {
+    this.$store.commit("changeTitleBar", this.$route.path);
+  },
+  layout: "main",
+};
 </script>
 
 <style></style>

@@ -10,8 +10,18 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+      // {
+      //   hid: "socketServer",
+      //   src: "http://localhost:8082/socket.io/socket.io.js",
+      //   defer: true,
+      // },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [
+      {
+        src: "https://cdn.jsdelivr.net/npm/vue-chat-scroll/dist/vue-chat-scroll.min.js",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -36,6 +46,7 @@ export default {
     "bootstrap-vue/nuxt",
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "nuxt-socket-io",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -46,5 +57,15 @@ export default {
   loading: "~/components/loading.vue",
   server: {
     host: "0.0.0.0",
+  },
+
+  io: {
+    sockets: [
+      {
+        name: "epylog-api",
+        url: "http://localhost:8082",
+        default: true,
+      },
+    ],
   },
 };

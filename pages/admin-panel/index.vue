@@ -1,9 +1,12 @@
-<template>
-  <h2>admin panel</h2>
-</template>
+<template></template>
 
 <script>
-export default {};
+export default {
+  beforeCreate() {
+    this.$store.commit("changeTitleBar", this.$route.path);
+  },
+  layout: "main",
+};
 </script>
 
 <style></style>

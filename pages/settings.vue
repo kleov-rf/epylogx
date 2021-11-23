@@ -1,9 +1,14 @@
 <template>
-  <h2>settings page</h2>
+  <h2></h2>
 </template>
 
 <script>
-export default {};
+export default {
+  beforeCreate() {
+    this.$store.commit("changeTitleBar", this.$route.path);
+  },
+  layout: "main",
+};
 </script>
 
 <style></style>

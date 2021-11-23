@@ -1,9 +1,12 @@
-<template>
-  <h2>users index</h2>
-</template>
+<template></template>
 
 <script>
-export default {};
+export default {
+  layout: "main",
+  beforeCreate() {
+    this.$store.commit("changeTitleBar", this.$route.path);
+  },
+};
 </script>
 
 <style></style>
