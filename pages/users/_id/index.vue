@@ -77,7 +77,7 @@ export default {
   },
   async asyncData({ params, $axios }) {
     const user = await $axios.$get(
-      `http://localhost:8082/api/users/${params.id}`
+      `https://epylogx-api.herokuapp.com/api/users/${params.id}`
     );
     return { user };
   },

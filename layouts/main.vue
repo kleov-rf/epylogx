@@ -1084,7 +1084,7 @@ import fileCard from "~/components/fileCard.vue";
 export default {
   components: { fileCard },
   mounted() {
-    const socket = io("http://localhost:8082", {
+    const socket = io("https://epylogx-api.herokuapp.com/", {
       extraHeaders: {
         "x-token":
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTgzYzhjNWU1YzI3YmVkNjZkZmFhOTAiLCJpc0FkbWluIjoiYWRtaW5LZXZpbiIsImlhdCI6MTYzNzM0NjE1MCwiZXhwIjoxNjM3MzUzMzUwfQ.0EO176bRoYK1k4AENKwxlR4U3P2VZG6LHYsrrsfTgTQ",
