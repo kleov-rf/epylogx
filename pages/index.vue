@@ -12,6 +12,7 @@
         <file-card :item="item" />
       </v-col>
     </v-row>
+    {{ process.env.MONDA }}
   </div>
 </template>
 
