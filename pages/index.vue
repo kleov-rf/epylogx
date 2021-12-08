@@ -12,7 +12,6 @@
         <file-card :item="item" />
       </v-col>
     </v-row>
-    {{ process.env.MONDA }}
   </div>
 </template>
 
@@ -29,7 +28,9 @@ export default {
   },
   layout: "main",
   async asyncData({ params, $axios }) {
-    const posts = await $axios.$get("https://epylogx-api.herokuapp.com/api/users/");
+    const posts = await $axios.$get(
+      "https://epylogx-api.herokuapp.com/api/users/"
+    );
     // console.log(posts);
     return { posts };
   },
