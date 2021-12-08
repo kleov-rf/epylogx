@@ -1,5 +1,8 @@
 export const state = () => ({
   breadCrumb_TitleBar: [],
+  metaUser: false,
+  isAdmin: false,
+  storeCart: [],
 });
 
 export const mutations = {
@@ -42,4 +45,19 @@ export const mutations = {
 
     state.breadCrumb_TitleBar = formattedResults;
   },
+  registerUser(state, message) {
+    state.metaUser = message;
+    // if (data?.adminId) {
+    //   state.isAdmin = true;
+    // } else {
+    //   state.isAdmin = false;
+    // }
+  },
+  addItemToCart(item) {
+    state.storeCart.push(item);
+  },
+};
+
+export const getters = {
+  isLogged: (state) => state.metaUser,
 };

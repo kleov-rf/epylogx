@@ -29,7 +29,7 @@ export default {
   layout: "main",
   async asyncData({ params, $axios }) {
     const posts = await $axios.$get("http://localhost:8082/api/users/");
-    console.log(posts);
+    // console.log(posts);
     return { posts };
   },
 };
