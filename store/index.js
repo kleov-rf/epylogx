@@ -45,19 +45,20 @@ export const mutations = {
 
     state.breadCrumb_TitleBar = formattedResults;
   },
-  registerUser(state, message) {
-    state.metaUser = message;
+  registerMetaUser(state, { metaUser, isAdmin }) {
+    state.metaUser = metaUser;
+    state.isAdmin = isAdmin;
     // if (data?.adminId) {
     //   state.isAdmin = true;
     // } else {
     //   state.isAdmin = false;
     // }
   },
-  addItemToCart(item) {
+  addItemToCart(state, item) {
     state.storeCart.push(item);
   },
 };
 
 export const getters = {
-  isLogged: (state) => state.metaUser,
+  isLogged: (state) => !!state.metaUser,
 };

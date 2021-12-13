@@ -63,7 +63,7 @@ export default {
     sockets: [
       {
         name: "epylog-api",
-        url: "https://epylogx-api.herokuapp.com",
+        url: "http://localhost:8082",
         default: true,
       },
     ],
